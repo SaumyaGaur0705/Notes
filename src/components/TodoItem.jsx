@@ -58,12 +58,7 @@ const TodoItem = ({ todo, index }) => {
           >
             <FiEdit />
           </button>
-          <button
-            className="mr-2 text-sm sm:px-2 px-1 py-1 rounded border border-black"
-            onClick={() => setIsEditing(true)}
-          >
-            <MdOutlineFavoriteBorder />
-          </button>
+          
           </>
           
         )}
