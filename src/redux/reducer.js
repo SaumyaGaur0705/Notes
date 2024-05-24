@@ -8,7 +8,7 @@ import {
     FILTER_TODOS,
     MARK_ALL_COMPLETED,
     UPDATE_SEARCH_TERM,
- 
+    UPDATE
   } from './actionTypes';
   
   const initialState = { todos: [], filter: 'ALL', searchTerm: '' };
@@ -77,7 +77,14 @@ import {
           searchTerm: state.searchTerm,
         };
   
-       
+        case UPDATE:
+      return {
+        todos: state.todos.map((todo, index) =>
+          index === action.payload.id ? { ...todo, text: action.payload.text } : todo
+        ),
+        filter: state.filter,
+        searchTerm: state.searchTerm,
+      };
       default:
         return state;
     }
