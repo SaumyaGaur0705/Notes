@@ -51,7 +51,7 @@ const TodoItem = ({ todo, index }) => {
           >
             Save
           </button>
-        ) : ( <>
+        ) : ( 
           <button
             className="mr-2 text-sm bg-blue-500 text-white sm:px-2 px-1 py-1 rounded"
             onClick={() => setIsEditing(true)}
@@ -59,7 +59,6 @@ const TodoItem = ({ todo, index }) => {
             <FiEdit />
           </button>
           
-          </>
           
         )}
         {!todo.completed && !isEditing && (
